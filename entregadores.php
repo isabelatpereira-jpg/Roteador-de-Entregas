@@ -56,8 +56,8 @@ $classeStatus = [
       <a href="pedidos.php">📥 Pedidos</a>
       <a href="entregadores.php" class="ativo">🛵 Entregadores</a>
       <a href="despacho.html">🚀 Despacho</a>
-      <a href="mapa.html">🗺️ Mapa</a>
-      <a href="busca.html">🔎 Busca</a>
+      <a href="mapa.php">🗺️ Mapa</a>
+      <a href="busca.php">🔎 Busca</a>
       <a href="estatisticas.html">📈 Estatísticas</a>
       <a href="login.html" class="sair">⏻ Sair</a>
     </nav>
