@@ -5,6 +5,7 @@ $fila = [
 ];
 
 function buscarPedido($fila, $codigo) {
+  //comentario
     $comparacoes = 0;
     foreach ($fila as $i => $pedido) {
         $comparacoes++;
