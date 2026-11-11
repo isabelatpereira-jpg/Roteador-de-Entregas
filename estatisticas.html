@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Estatísticas · Roteador de Entregas</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛵</text></svg>">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -25,26 +24,25 @@
       <a href="estatisticas.html" class="ativo">📈 Estatísticas</a>
       <a href="login.html" class="sair">⏻ Sair</a>
     </nav>
-    <div class="side-foot"><span class="dot ok"></span> Central online · Turno tarde</div>
   </aside>
 
   <main>
     <header class="topbar">
       <div class="titulo">
         <h1>Estatísticas da frota</h1>
-        <p>Produtividade do turno · atualizado pela central</p>
+        <p>Produtividade do turno</p>
       </div>
       <div class="user">
-        <span class="tag">Turno tarde</span>
         <span class="avatar">CS</span>
       </div>
     </header>
 
+    <!-- KPIs -->
     <section class="kpis">
-      <article class="card kpi"><span class="kpi-top">📦 Entregas hoje</span><b>47</b><small>+12% vs. ontem</small></article>
-      <article class="card kpi"><span class="kpi-top">⏱️ Tempo médio</span><b>32<small style="font-size:15px;color:var(--mut)"> min</small></b><small>da coleta à entrega</small></article>
-      <article class="card kpi"><span class="kpi-top">🎯 No prazo</span><b>92%</b><small>meta mínima: 90%</small></article>
-      <article class="card kpi"><span class="kpi-top">🛣️ Distância total</span><b>186<small style="font-size:15px;color:var(--mut)"> km</small></b><small>somadas na matriz</small></article>
+      <article class="card kpi"><span class="kpi-top">📦 Entregas hoje</span><b>0</b></article>
+      <article class="card kpi"><span class="kpi-top">⏱️ Tempo médio</span><b>0<small class="un"> min</small></b></article>
+      <article class="card kpi"><span class="kpi-top">🎯 No prazo</span><b>0%</b></article>
+      <article class="card kpi"><span class="kpi-top">🛣️ Distância total</span><b>0<small class="un"> km</small></b></article>
     </section>
 
     <div class="grid g3">
@@ -53,11 +51,10 @@
       <section class="card">
         <div class="card-head"><h2>📦 Entregas por entregador</h2><span class="tag">hoje</span></div>
         <div class="barras">
-          <div class="bar"><i>14</i><div class="fill" style="height:92%"></div><b>Ana</b></div>
-          <div class="bar"><i>12</i><div class="fill" style="height:78%"></div><b>Bruno</b></div>
-          <div class="bar"><i>9</i><div class="fill" style="height:58%"></div><b>Carlos</b></div>
-          <div class="bar"><i>7</i><div class="fill" style="height:45%"></div><b>Eric</b></div>
-          <div class="bar"><i>5</i><div class="fill" style="height:32%"></div><b>Duda</b></div>
+          <!-- Repita para cada entregador (altura em %):
+          <div class="bar"><i>0</i><div class="fill" style="height:0%"></div><b>Nome</b></div>
+          -->
+          <p class="vazio">Sem dados.</p>
         </div>
       </section>
 
@@ -65,25 +62,24 @@
       <section class="card">
         <div class="card-head"><h2>🛵 Status da frota</h2><span class="tag">agora</span></div>
         <div class="donut">
-          <div class="donut-buraco"><b>5</b><small>entregadores</small></div>
+          <div class="donut-buraco"><b>0</b><small>entregadores</small></div>
         </div>
-        <div class="leg-row"><span class="dot ok"></span> Disponível <b>2 · 40%</b></div>
-        <div class="leg-row"><span class="dot info"></span> Em Rota <b>2 · 40%</b></div>
-        <div class="leg-row"><span class="dot warn"></span> Em Pausa <b>1 · 20%</b></div>
+        <div class="leg-row"><span class="dot ok"></span> Disponível <b>0 · 0%</b></div>
+        <div class="leg-row"><span class="dot info"></span> Em Rota <b>0 · 0%</b></div>
+        <div class="leg-row"><span class="dot warn"></span> Em Pausa <b>0 · 0%</b></div>
       </section>
 
       <!-- META -->
       <section class="card">
-        <div class="card-head"><h2>🎯 Meta do dia</h2><span class="tag">até 22h</span></div>
-        <div class="meta-linha"><span>Entregas</span><span class="prog"><i style="width:78%"></i></span><b>78%</b></div>
-        <div class="meta-linha"><span>No prazo</span><span class="prog"><i style="width:92%"></i></span><b>92%</b></div>
-        <div class="meta-linha"><span>Prior. ALTA</span><span class="prog"><i style="width:100%"></i></span><b>100%</b></div>
-        <div class="meta-linha"><span>Ocupação</span><span class="prog"><i style="width:60%"></i></span><b>60%</b></div>
-        <div class="aviso" style="margin-top:14px">✅ <span>Meta de prioridade ALTA alcançada — 100% no prazo.</span></div>
+        <div class="card-head"><h2>🎯 Meta do dia</h2></div>
+        <div class="meta-linha"><span>Entregas</span><span class="prog"><i style="width:0%"></i></span><b>0%</b></div>
+        <div class="meta-linha"><span>No prazo</span><span class="prog"><i style="width:0%"></i></span><b>0%</b></div>
+        <div class="meta-linha"><span>Prior. ALTA</span><span class="prog"><i style="width:0%"></i></span><b>0%</b></div>
+        <div class="meta-linha"><span>Ocupação</span><span class="prog"><i style="width:0%"></i></span><b>0%</b></div>
       </section>
     </div>
 
-    <!-- TABELA DE DESEMPENHO -->
+    <!-- DESEMPENHO INDIVIDUAL -->
     <section class="card">
       <div class="card-head">
         <h2>📊 Desempenho individual</h2>
@@ -95,19 +91,21 @@
             <tr><th>Entregador</th><th>Entregas</th><th>No prazo</th><th>Tempo médio</th><th>Dist. média</th><th>Status</th></tr>
           </thead>
           <tbody>
-            <tr><td>Ana Souza <small class="mono">M-002</small></td><td class="num">14</td><td><span class="prog" style="width:130px"><i style="width:94%"></i></span> <b>94%</b></td><td class="num">28 min</td><td class="num">6,2 km</td><td><span class="b b-info">Em Rota</span></td></tr>
-            <tr><td>Bruno Lima <small class="mono">M-003</small></td><td class="num">12</td><td><span class="prog" style="width:130px"><i style="width:90%"></i></span> <b>90%</b></td><td class="num">31 min</td><td class="num">7,8 km</td><td><span class="b b-info">Em Rota</span></td></tr>
-            <tr><td>Carlos Silva <small class="mono">M-001</small></td><td class="num">9</td><td><span class="prog" style="width:130px"><i style="width:88%"></i></span> <b>88%</b></td><td class="num">35 min</td><td class="num">5,4 km</td><td><span class="b b-ok">Disponível</span></td></tr>
-            <tr><td>Eric Nunes <small class="mono">M-005</small></td><td class="num">7</td><td><span class="prog" style="width:130px"><i style="width:91%"></i></span> <b>91%</b></td><td class="num">30 min</td><td class="num">6,9 km</td><td><span class="b b-ok">Disponível</span></td></tr>
-            <tr><td>Duda Prado <small class="mono">M-004</small></td><td class="num">5</td><td><span class="prog" style="width:130px"><i style="width:96%"></i></span> <b>96%</b></td><td class="num">26 min</td><td class="num">4,8 km</td><td><span class="b b-warn">Em Pausa</span></td></tr>
+            <!-- Repita para cada entregador:
+            <tr>
+              <td>Nome <small class="mono">ID</small></td>
+              <td class="num">0</td>
+              <td><span class="prog prog-md"><i style="width:0%"></i></span> <b>0%</b></td>
+              <td class="num">0 min</td>
+              <td class="num">0 km</td>
+              <td><span class="b b-ok">Disponível</span></td>
+            </tr>
+            -->
+            <tr><td colspan="6" class="vazio">Nenhum entregador cadastrado.</td></tr>
           </tbody>
         </table>
       </div>
     </section>
-
-    <footer class="rodape">
-      Roteador de Entregas · Fila FIFO · Pilha LIFO · Matriz 2D · Vetor 1D · Busca & Ordenação — PHP + HTML/CSS, sem JS e sem SQL
-    </footer>
   </main>
 </div>
 </body>

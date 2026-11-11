@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Despacho · Roteador de Entregas</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛵</text></svg>">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -25,7 +24,6 @@
       <a href="estatisticas.html">📈 Estatísticas</a>
       <a href="login.html" class="sair">⏻ Sair</a>
     </nav>
-    <div class="side-foot"><span class="dot ok"></span> Central online · Turno tarde</div>
   </aside>
 
   <main>
@@ -35,7 +33,7 @@
         <p>Fila FIFO → entregador disponível → pilha da mochila (LIFO)</p>
       </div>
       <div class="user">
-        <span class="tag tag-acc">Fila: 5 · Livres: 2</span>
+        <span class="tag tag-acc">Fila: 0 · Livres: 0</span>
         <span class="avatar">CS</span>
       </div>
     </header>
@@ -49,78 +47,42 @@
           <span class="tag">sai sempre da frente</span>
         </div>
         <ul class="fila">
+          <!-- Repita este item para cada pedido da fila (o primeiro recebe a classe "prox"):
           <li class="fila-item prox">
             <span class="pos">01</span>
             <div class="fi-info">
-              <strong class="mono">TRK-1042</strong>
-              <small>Av. Paulista, 900 · Q(4,2) · 4 quadras</small>
-            </div>
-            <div class="fi-badges"><span class="b b-alta">Alta</span><span class="b b-acc">Próximo</span></div>
-          </li>
-          <li class="fila-item">
-            <span class="pos">02</span>
-            <div class="fi-info">
-              <strong class="mono">TRK-1043</strong>
-              <small>Rua Aurora, 45 · Q(2,5) · 5 quadras</small>
-            </div>
-            <div class="fi-badges"><span class="b b-media">Média</span></div>
-          </li>
-          <li class="fila-item">
-            <span class="pos">03</span>
-            <div class="fi-info">
-              <strong class="mono">TRK-1044</strong>
-              <small>Rua Augusta, 1200 · Q(5,6) · 9 quadras</small>
+              <strong class="mono">CÓDIGO</strong>
+              <small>Endereço · Q(x,y) · N quadras</small>
             </div>
             <div class="fi-badges"><span class="b b-alta">Alta</span></div>
           </li>
-          <li class="fila-item">
-            <span class="pos">04</span>
-            <div class="fi-info">
-              <strong class="mono">TRK-1045</strong>
-              <small>Al. Santos, 300 · Q(6,3) · 7 quadras</small>
-            </div>
-            <div class="fi-badges"><span class="b b-baixa">Baixa</span></div>
-          </li>
-          <li class="fila-item">
-            <span class="pos">05</span>
-            <div class="fi-info">
-              <strong class="mono">TRK-1046</strong>
-              <small>R. Consolação, 800 · Q(3,4) · 5 quadras</small>
-            </div>
-            <div class="fi-badges"><span class="b b-media">Média</span></div>
-          </li>
+          -->
+          <li class="vazio">Nenhum pedido na fila.</li>
         </ul>
       </section>
 
       <div class="col">
 
-        <div class="aviso acc">🚀 <span>TRK-1042 (Alta · 4 quadras) pronto para atribuição — selecione um entregador disponível.</span></div>
-
         <!-- ENTREGADORES DISPONÍVEIS -->
         <section class="card">
           <div class="card-head">
             <h2>🛵 Entregadores disponíveis</h2>
-            <span class="tag">2 livres</span>
+            <span class="tag">0 livres</span>
           </div>
           <form action="despacho.html" method="get">
+            <!-- Repita este bloco para cada entregador livre:
             <label class="radio-card">
-              <input type="radio" name="entregador" checked>
+              <input type="radio" name="entregador" value="ID">
               <span class="rc-body">
-                <span class="avatar sm">CS</span>
-                <span class="rc-info"><strong>Carlos Silva</strong><small>M-001 · Moto · mochila vazia</small></span>
+                <span class="avatar sm">XX</span>
+                <span class="rc-info"><strong>Nome</strong><small>ID · Veículo · mochila vazia</small></span>
                 <span class="b b-ok">Disponível</span>
               </span>
             </label>
-            <label class="radio-card">
-              <input type="radio" name="entregador">
-              <span class="rc-body">
-                <span class="avatar sm">EN</span>
-                <span class="rc-info"><strong>Eric Nunes</strong><small>M-005 · Moto · mochila vazia</small></span>
-                <span class="b b-ok">Disponível</span>
-              </span>
-            </label>
-            <div class="acoes" style="margin-top:14px">
-              <button type="submit" class="btn btn-pri">🚀 Despachar TRK-1042 (push)</button>
+            -->
+            <p class="vazio">Nenhum entregador disponível.</p>
+            <div class="acoes mt">
+              <button type="submit" class="btn btn-pri">🚀 Despachar (push)</button>
             </div>
           </form>
         </section>
@@ -128,36 +90,27 @@
         <!-- PILHA / MOCHILA -->
         <section class="card">
           <div class="card-head">
-            <h2>🎒 Mochila (pilha) — Ana Souza</h2>
-            <span class="tag">em rota · 3 pacotes</span>
+            <h2>🎒 Mochila (pilha)</h2>
+            <span class="tag">0 pacotes</span>
           </div>
           <ol class="pilha">
+            <!-- Repita este item do topo para baixo (o primeiro recebe "topo" e a etiqueta):
             <li class="caixa topo">
               <span class="tag-topo">TOPO · SAI PRIMEIRO</span>
-              <div class="fi-info"><strong class="mono">TRK-1039</strong><small>Av. Rebouças, 1500 · Q(7,8)</small></div>
+              <div class="fi-info"><strong class="mono">CÓDIGO</strong><small>Endereço · Q(x,y)</small></div>
               <span class="b b-alta">Alta</span>
             </li>
-            <li class="caixa">
-              <div class="fi-info"><strong class="mono">TRK-1036</strong><small>R. Bela Cintra, 210 · Q(6,5)</small></div>
-              <span class="b b-media">Média</span>
-            </li>
-            <li class="caixa">
-              <div class="fi-info"><strong class="mono">TRK-1033</strong><small>R. Guaicurus, 40 · Q(2,9)</small></div>
-              <span class="b b-baixa">Baixa</span>
-            </li>
+            -->
+            <li class="vazio">Mochila vazia.</li>
           </ol>
-          <div class="acoes" style="margin-top:16px">
+          <div class="acoes mt">
             <button type="button" class="btn btn-pri">📤 Registrar entrega (pop)</button>
             <button type="button" class="btn btn-ghost">🗺️ Ver rota no mapa</button>
           </div>
-          <p class="hint" style="margin-top:12px">🧠 LIFO — os pacotes saem do <b>topo para baixo</b>: no PHP, <b>array_pop()</b> remove e <b>$pilha[] = …</b> empilha.</p>
         </section>
+
       </div>
     </div>
-
-    <footer class="rodape">
-      Roteador de Entregas · Fila FIFO · Pilha LIFO · Matriz 2D · Vetor 1D · Busca & Ordenação — PHP + HTML/CSS, sem JS e sem SQL
-    </footer>
   </main>
 </div>
 </body>

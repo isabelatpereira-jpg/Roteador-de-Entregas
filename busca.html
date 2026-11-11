@@ -47,31 +47,6 @@
           <h2>🔎 Buscar entrega por rastreio</h2>
           <span class="tag">busca linear</span>
         </div>
-        <form class="form" action="busca.html" method="get">
-          <div class="busca-linha" style="display:flex;gap:10px">
-            <div class="fld" style="flex:1">
-              <label for="cod">Código de rastreio</label>
-              <input type="text" id="cod" value="TRK-1042" class="mono">
-            </div>
-            <button type="submit" class="btn btn-pri" style="align-self:flex-end">🔎 Buscar</button>
-          </div>
-        </form>
-
-        <div class="card" style="margin-top:16px;background:var(--card2)">
-          <div class="card-head">
-            <h2>✅ Resultado da busca</h2>
-            <span class="tag tag-ok">encontrado · 1 comparação</span>
-          </div>
-          <div class="res-linha"><span>Código</span><b class="mono">TRK-1042</b></div>
-          <div class="res-linha"><span>Situação</span><b><span class="b b-warn">Aguardando despacho</span></b></div>
-          <div class="res-linha"><span>Posição na fila</span><b>1º (próximo a sair)</b></div>
-          <div class="res-linha"><span>Destinatário</span><b>Hotel Mariana</b></div>
-          <div class="res-linha"><span>Endereço</span><b>Av. Paulista, 900</b></div>
-          <div class="res-linha"><span>Quadrante</span><b class="mono">Q(4,2)</b></div>
-          <div class="res-linha"><span>Distância da central</span><b>4 quadras</b></div>
-          <div class="res-linha"><span>Prioridade</span><b><span class="b b-alta">Alta</span></b></div>
-        </div>
-        <p class="hint" style="margin-top:14px">🧠 A busca linear percorre a fila item a item com <b>foreach</b> até encontrar o código — o item 01 é encontrado na 1ª comparação.</p>
       </section>
 
       <!-- ORDENAÇÃO -->
@@ -80,27 +55,15 @@
           <h2>🔤 Ordenar fila por prioridade</h2>
           <span class="tag">Alta → Baixa</span>
         </div>
-        <ul class="fila">
-          <li class="fila-item"><span class="pos">1</span><div class="fi-info"><strong class="mono">TRK-1042</strong><small>Q(4,2) · 4 quadras</small></div><span class="b b-alta">Alta</span></li>
-          <li class="fila-item"><span class="pos">2</span><div class="fi-info"><strong class="mono">TRK-1044</strong><small>Q(5,6) · 9 quadras</small></div><span class="b b-alta">Alta</span></li>
-          <li class="fila-item"><span class="pos">3</span><div class="fi-info"><strong class="mono">TRK-1043</strong><small>Q(2,5) · 5 quadras</small></div><span class="b b-media">Média</span></li>
-          <li class="fila-item"><span class="pos">4</span><div class="fi-info"><strong class="mono">TRK-1046</strong><small>Q(3,4) · 5 quadras</small></div><span class="b b-media">Média</span></li>
-          <li class="fila-item"><span class="pos">5</span><div class="fi-info"><strong class="mono">TRK-1045</strong><small>Q(6,3) · 7 quadras</small></div><span class="b b-baixa">Baixa</span></li>
-        </ul>
+        <ul class="fila"></ul>
 
-        <div class="card-head" style="margin-top:22px;margin-bottom:0">
+        <div class="card-head card-head-sec">
           <h2>📐 Ordenar por distância</h2>
           <span class="tag">mais perto primeiro</span>
         </div>
-        <ul class="fila" style="margin-top:14px">
-          <li class="fila-item"><span class="pos">1</span><div class="fi-info"><strong class="mono">TRK-1042</strong><small>Q(4,2) · Alta</small></div><b class="mono" style="color:var(--acc)">4</b></li>
-          <li class="fila-item"><span class="pos">2</span><div class="fi-info"><strong class="mono">TRK-1043</strong><small>Q(2,5) · Média</small></div><b class="mono" style="color:var(--acc)">5</b></li>
-          <li class="fila-item"><span class="pos">3</span><div class="fi-info"><strong class="mono">TRK-1046</strong><small>Q(3,4) · Média</small></div><b class="mono" style="color:var(--acc)">5</b></li>
-          <li class="fila-item"><span class="pos">4</span><div class="fi-info"><strong class="mono">TRK-1045</strong><small>Q(6,3) · Baixa</small></div><b class="mono" style="color:var(--acc)">7</b></li>
-          <li class="fila-item"><span class="pos">5</span><div class="fi-info"><strong class="mono">TRK-1044</strong><small>Q(5,6) · Alta</small></div><b class="mono" style="color:var(--acc)">9</b></li>
-        </ul>
-        <p class="hint" style="margin-top:14px">🧠 Ordenação executada no servidor — em PHP com <b>usort()</b> por prioridade e por distância de Manhattan.</p>
+        <ul class="fila"></ul>
       </section>
+
     </div>
 
     <footer class="rodape">

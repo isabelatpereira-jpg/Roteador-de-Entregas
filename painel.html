@@ -43,23 +43,23 @@
     <section class="kpis">
       <article class="card kpi">
         <span class="kpi-top">📦 Pedidos na fila</span>
-        <b>5</b>
-        <small>+2 na última hora</small>
+        <b></b>
+        <small></small>
       </article>
       <article class="card kpi">
         <span class="kpi-top">🚀 Em rota agora</span>
-        <b>5</b>
-        <small>pacotes · 2 entregadores</small>
+        <b></b>
+        <small></small>
       </article>
       <article class="card kpi">
         <span class="kpi-top">✅ Concluídas hoje</span>
-        <b>47</b>
-        <small>meta do dia: 60</small>
+        <b></b>
+        <small></small>
       </article>
       <article class="card kpi">
         <span class="kpi-top">🛵 Disponíveis</span>
-        <b>2<small style="font-size:16px;color:var(--mut)"> / 5</small></b>
-        <small>frota ativa no vetor</small>
+        <b><small class="kpi-total"></small></b>
+        <small></small>
       </article>
     </section>
 
@@ -69,32 +69,7 @@
           <h2>📥 Fila de despacho (FIFO)</h2>
           <a class="card-link" href="pedidos.php">Fila completa →</a>
         </div>
-        <ul class="fila">
-          <li class="fila-item prox">
-            <span class="pos">01</span>
-            <div class="fi-info">
-              <strong class="mono">TRK-1042</strong>
-              <small>Av. Paulista, 900 · Q(4,2) · 4 quadras</small>
-            </div>
-            <div class="fi-badges"><span class="b b-alta">Alta</span><span class="b b-acc">Próximo</span></div>
-          </li>
-          <li class="fila-item">
-            <span class="pos">02</span>
-            <div class="fi-info">
-              <strong class="mono">TRK-1043</strong>
-              <small>Rua Aurora, 45 · Q(2,5) · 5 quadras</small>
-            </div>
-            <div class="fi-badges"><span class="b b-media">Média</span></div>
-          </li>
-          <li class="fila-item">
-            <span class="pos">03</span>
-            <div class="fi-info">
-              <strong class="mono">TRK-1044</strong>
-              <small>Rua Augusta, 1200 · Q(5,6) · 9 quadras</small>
-            </div>
-            <div class="fi-badges"><span class="b b-alta">Alta</span></div>
-          </li>
-        </ul>
+        <ul class="fila"></ul>
       </section>
 
       <section class="card">
@@ -102,33 +77,7 @@
           <h2>🛵 Frota agora</h2>
           <a class="card-link" href="entregadores.php">Gerenciar →</a>
         </div>
-        <ul class="frota">
-          <li>
-            <span class="avatar sm">CS</span>
-            <div class="fi-info"><strong>Carlos Silva</strong><small>M-001 · Moto</small></div>
-            <span class="b b-ok">Disponível</span>
-          </li>
-          <li>
-            <span class="avatar sm">AS</span>
-            <div class="fi-info"><strong>Ana Souza</strong><small>M-002 · Moto · 3 na mochila</small></div>
-            <span class="b b-info">Em Rota</span>
-          </li>
-          <li>
-            <span class="avatar sm">BL</span>
-            <div class="fi-info"><strong>Bruno Lima</strong><small>M-003 · Moto · 2 na mochila</small></div>
-            <span class="b b-info">Em Rota</span>
-          </li>
-          <li>
-            <span class="avatar sm">DP</span>
-            <div class="fi-info"><strong>Duda Prado</strong><small>M-004 · Bike</small></div>
-            <span class="b b-warn">Em Pausa</span>
-          </li>
-          <li>
-            <span class="avatar sm">EN</span>
-            <div class="fi-info"><strong>Eric Nunes</strong><small>M-005 · Moto</small></div>
-            <span class="b b-ok">Disponível</span>
-          </li>
-        </ul>
+        <ul class="frota"></ul>
       </section>
     </div>
 
@@ -140,13 +89,7 @@
         </div>
         <div class="mapa-box">
           <div class="eixo-y" aria-hidden="true"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span></div>
-          <div class="mapa">
-            <span class="mk mk-central" style="left:5%;top:5%">🏢<i>Central</i></span>
-            <span class="mk mk-moto" style="left:65%;top:75%">🛵<i>Ana · M-002</i></span>
-            <span class="mk mk-moto" style="left:45%;top:25%">🛵<i>Bruno · M-003</i></span>
-            <span class="mk mk-entrega" style="left:35%;top:15%">📦<i>TRK-1042</i></span>
-            <span class="mk mk-entrega" style="left:45%;top:55%">📦<i>TRK-1044</i></span>
-          </div>
+          <div class="mapa"></div>
           <div class="eixo-x" aria-hidden="true"><span>A</span><span>B</span><span>C</span><span>D</span><span>E</span><span>F</span><span>G</span><span>H</span><span>I</span><span>J</span></div>
         </div>
         <div class="legenda">
@@ -159,13 +102,9 @@
       <section class="card">
         <div class="card-head">
           <h2>🔔 Alertas da central</h2>
-          <span class="tag">3 ativos</span>
+          <span class="tag"></span>
         </div>
-        <ul class="frota">
-          <li><span class="dot err"></span><div class="fi-info"><strong>TRK-1044 · prioridade ALTA</strong><small>Aguardando despacho há 18 min</small></div></li>
-          <li><span class="dot warn"></span><div class="fi-info"><strong>Duda Prado em pausa</strong><small>Inativo há 25 min · M-004</small></div></li>
-          <li><span class="dot info"></span><div class="fi-info"><strong>TRK-1039 no topo da mochila</strong><small>Ana Souza · próximo destino Q(7,8)</small></div></li>
-        </ul>
+        <ul class="frota"></ul>
       </section>
     </div>
 
