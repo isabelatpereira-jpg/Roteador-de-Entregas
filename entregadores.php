@@ -92,10 +92,14 @@ $classeStatus = [
               <label for="ident">Identificação</label>
               <input type="text" id="ident" value="<?= $proximoId ?>" readonly class="mono">
             </div>
-            <div class="fld">
-              <label for="tel">Telefone / WhatsApp</label>
-              <input type="tel" id="tel" name="tel" placeholder="(11) 90000-0000">
-            </div>
+             <div class="fld">
+               <label for="tel">Telefone / WhatsApp</label>
+               <input type="tel" id="tel" name="tel" required maxlength="15"
+                placeholder="(11) 90000-0000"
+                pattern="\(?\d{2}\)?\s?\d{4,5}-?\d{4}"
+                 title="Digite o DDD e o número, ex: (71) 99999-9999"
+                 value="<?= h($_GET['tel'] ?? '') ?>">
+        </div>
           </div>
           <div class="fld-2">
             <div class="fld">
