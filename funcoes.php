@@ -13,3 +13,11 @@ function listar($arquivo) {
     }
     return file($arquivo, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
 }
+
+function lerLinhas(string $arq): array {
+    return file_exists($arq)
+        ? file($arq, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)
+        : [];
+}
+
+

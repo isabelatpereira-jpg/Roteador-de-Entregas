@@ -55,8 +55,8 @@ $classeStatus = [
       <a href="painel.html">📊 Painel</a>
       <a href="pedidos.php">📥 Pedidos</a>
       <a href="entregadores.php" class="ativo">🛵 Entregadores</a>
-      <a href="despacho.html">🚀 Despacho</a>
-      <a href="mapa.html">🗺️ Mapa</a>
+      <a href="despacho.php">🚀 Despacho</a>
+      <a href="mapa.php">🗺️ Mapa</a>
       <a href="busca.html">🔎 Busca</a>
       <a href="estatisticas.html">📈 Estatísticas</a>
       <a href="login.html" class="sair">⏻ Sair</a>
@@ -68,7 +68,6 @@ $classeStatus = [
     <header class="topbar">
       <div class="titulo">
         <h1>Entregadores</h1>
-        <p>Cadastro e vetor 1D da frota ($frota[0] … $frota[<?= max(count($frota) - 1, 0) ?>])</p>
       </div>
       <div class="user">
         <span class="tag"><?= count($frota) ?> no vetor</span>
@@ -82,7 +81,6 @@ $classeStatus = [
       <section class="card">
         <div class="card-head">
           <h2>🛵 Novo entregador</h2>
-          <span class="tag">push → próximo índice</span>
         </div>
         <form class="form" action="entregadores.php" method="get">
           <div class="fld">
@@ -121,7 +119,6 @@ $classeStatus = [
             <button type="submit" class="btn btn-pri">✅ Cadastrar no vetor</button>
             <button type="reset" class="btn btn-ghost">Limpar</button>
           </div>
-          <p class="hint">📌 Cada entregador ocupa um <b>índice do vetor</b> e recebe uma pilha (mochila) própria.</p>
         </form>
       </section>
 
@@ -155,7 +152,7 @@ $classeStatus = [
                   <td><?= h($c[3]) ?></td>
                   <td class="num">0</td>
                   <td><span class="b <?= $classe ?>"><?= h($c[4]) ?></span></td>
-                  <td><a class="card-link" href="despacho.html">pilha →</a></td>
+                  <td><a class="card-link" href="despacho.php">pilha →</a></td>
                 </tr>
               <?php endforeach; ?>
             </tbody>
@@ -171,7 +168,7 @@ $classeStatus = [
     </div>
 
     <footer class="rodape">
-      Roteador de Entregas · Fila FIFO · Pilha LIFO · Matriz 2D · Vetor 1D · Busca & Ordenação — PHP + HTML/CSS, sem JS e sem SQL
+      Roteador de Entregas · Frota Urbana ·  Logística 
     </footer>
   </main>
 </div>

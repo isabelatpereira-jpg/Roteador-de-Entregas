@@ -53,9 +53,9 @@ $nomesPrio = ["alta" => "Alta", "media" => "Média", "baixa" => "Baixa"];
       <a href="painel.html">📊 Painel</a>
       <a href="pedidos.php" class="ativo">📥 Pedidos</a>
       <a href="entregadores.php">🛵 Entregadores</a>
-      <a href="despacho.html">🚀 Despacho</a>
-      <a href="mapa.html">🗺️ Mapa</a>
-      <a href="busca.html">🔎 Busca</a>
+      <a href="despacho.php">🚀 Despacho</a>
+      <a href="mapa.php">🗺️ Mapa</a>
+      <a href="busca.php">🔎 Busca</a>
       <a href="estatisticas.html">📈 Estatísticas</a>
       <a href="login.html" class="sair">⏻ Sair</a>
     </nav>
@@ -66,7 +66,7 @@ $nomesPrio = ["alta" => "Alta", "media" => "Média", "baixa" => "Baixa"];
     <header class="topbar">
       <div class="titulo">
         <h1>Cadastro de entregas</h1>
-        <p>Cada pedido entra no final da fila de despacho (FIFO)</p>
+        <p>Cada pedido entra no final da fila de despacho</p>
       </div>
       <div class="user">
         <span class="tag tag-acc">Fila: <?= count($pedidos) ?> aguardando</span>
@@ -80,7 +80,6 @@ $nomesPrio = ["alta" => "Alta", "media" => "Média", "baixa" => "Baixa"];
       <section class="card">
         <div class="card-head">
           <h2>📋 Novo pedido</h2>
-          <span class="tag">enqueue → final da fila</span>
         </div>
         <form class="form" action="pedidos.php" method="get">
           <div class="fld-2">
@@ -163,12 +162,10 @@ $nomesPrio = ["alta" => "Alta", "media" => "Média", "baixa" => "Baixa"];
             <a class="btn btn-ghost" href="pedidos.php?limpar=1">🗑️ Limpar fila</a>
           </div>
         <?php endif; ?>
-        <p class="hint" style="margin-top:14px">🧠 Estrutura FIFO — no PHP: <b>array_push()</b> para enfileirar e <b>array_shift()</b> para despachar.</p>
-      </section>
     </div>
 
     <footer class="rodape">
-      Roteador de Entregas · Fila FIFO · Pilha LIFO · Matriz 2D · Vetor 1D · Busca & Ordenação — PHP + HTML/CSS, sem JS e sem SQL
+      Roteador de Entregas · Frota Urbana ·  Logística 
     </footer>
   </main>
 </div>

@@ -45,7 +45,7 @@ if (isset($_GET['cod'])) {
       <a href="painel.html">📊 Painel</a>
       <a href="pedidos.php">📥 Pedidos</a>
       <a href="entregadores.php">🛵 Entregadores</a>
-      <a href="despacho.html">🚀 Despacho</a>
+      <a href="despacho.php">🚀 Despacho</a>
       <a href="mapa.php">🗺️ Mapa</a>
       <a href="busca.php" class="ativo">🔎 Busca</a>
       <a href="estatisticas.html">📈 Estatísticas</a>
@@ -122,7 +122,7 @@ if (isset($_GET['cod'])) {
     </div>
 
     <footer class="rodape">
-      Roteador de Entregas · Fila FIFO · Pilha LIFO · Matriz 2D · Vetor 1D · Busca & Ordenação — PHP + HTML/CSS, sem JS e sem SQL
+      Roteador de Entregas · Frota Urbana ·  Logística 
     </footer>
   </main>
 </div>

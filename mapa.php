@@ -42,7 +42,7 @@ $totalMarcadores = 1 + count($fila) + count($entregadores);
       <a href="painel.html">📊 Painel</a>
       <a href="pedidos.php">📥 Pedidos</a>
       <a href="entregadores.php">🛵 Entregadores</a>
-      <a href="despacho.html">🚀 Despacho</a>
+      <a href="despacho.php">🚀 Despacho</a>
       <a href="mapa.php" class="ativo">🗺️ Mapa</a>
       <a href="busca.php">🔎 Busca</a>
       <a href="estatisticas.html">📈 Estatísticas</a>
@@ -106,11 +106,7 @@ $totalMarcadores = 1 + count($fila) + count($entregadores);
 
       <!-- PAINEL LATERAL -->
       <div class="col">
-        <section class="card">
-          <div class="card-head">
-            <h2>📍 Ocupação atual</h2>
-          </div>
-          <div class="ocupacao">
+        <section class="card">     
             <?php
             echo '<div class="res-linha"><span>Q(' . $centralX . ',' . $centralY . ') · ' . $letras[$centralX - 1] . $centralY . '</span><b>🏢 Central</b></div>';
 
@@ -131,10 +127,7 @@ $totalMarcadores = 1 + count($fila) + count($entregadores);
 
         <section class="card">
           <div class="card-head">
-            <h2>📏 Cálculo de distância</h2>
-          </div>
-          <div class="formula">dist = |x1 − x2| + |y1 − y2|</div>
-          <div class="distancias">
+            <div class="distancias">
             <?php
             foreach ($fila as $pedido) {
                 $d = distancia($centralX, $centralY, $pedido['x'], $pedido['y']);
@@ -147,7 +140,7 @@ $totalMarcadores = 1 + count($fila) + count($entregadores);
     </div>
 
     <footer class="rodape">
-      Roteador de Entregas · Fila FIFO · Pilha LIFO · Matriz 2D · Vetor 1D · Busca & Ordenação — PHP + HTML/CSS, sem JS e sem SQL
+      Roteador de Entregas · Frota Urbana ·  Logística 
     </footer>
   </main>
 </div>
