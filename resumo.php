@@ -1,32 +1,20 @@
 <?php
-function lerPedidos() {
+require_once "funcoes.php";
+
+function lerPedidos()  {
     $pedidos = array();
 
-    $linhas = array("pedidos.txt");
+    foreach (listar("pedidos.txt") as $linhas) {
+        $partes = explode(";", $linhas);
 
-    foreach($linhas as $linha) {
-        $linha = trim($linha);
-
-        if ($linha !="")
-            $partes = explode(",", $linha);
-
-        $pedido = array(
-            "id"     => $partes[01],
-            "status" => $partes[02],
-            "linha"  => $partes[03],
-            "coluna" => $partes[04],
-        );
-
-        $pedidos[] = $pedido;
-
+        $pedidos[] = array(
+            "id"          => $partes[0],
+            "x"           => (int)$partes[3],
+            "y"           => (int)$partes[4],
+            "prioridade"  => $partes[5],
+            "status"      => $partes[6] ?? ""
+         );
     }
+         return $pedidos;
 }
-
-$entregadores = array(
-array("nome" =>"", ""=> true),
-array("nome"=> "", ""=> false),
-array("nome"=> "","" => true),  
-
-
-);
 ?>

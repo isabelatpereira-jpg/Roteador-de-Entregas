@@ -34,12 +34,12 @@ $totalMarcadores = 1 + count($fila) + count($entregadores);
 <div class="app">
 
   <aside class="sidebar">
-    <a class="logo" href="painel.html">
+    <a class="logo" href="painel.php">
       <span class="logo-ic">🛵</span>
       <span class="logo-txt">Roteador<b>Entregas</b></span>
     </a>
     <nav class="nav" aria-label="Navegação principal">
-      <a href="painel.html">📊 Painel</a>
+      <a href="painel.php">📊 Painel</a>
       <a href="pedidos.php">📥 Pedidos</a>
       <a href="entregadores.php">🛵 Entregadores</a>
       <a href="despacho.php">🚀 Despacho</a>
