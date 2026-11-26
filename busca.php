@@ -123,8 +123,7 @@ if (isset($_GET['cod'])) {
             <h2>📐 Ordenar por distância</h2>
             <span class="tag">mais perto primeiro</span>
           </div>
-          <ul class="fila">
-            <ul class="fila" style="font-family:Arial, Helvetica, sans-serif; font-size: 16px; color: #fff;">
+            <ul class="fila" style="font-family:'Segoe UI',system-ui,-apple-system,Roboto,'Helvetica Neue',Arial,sans-serif; font-size: 16px; color: #fff;">
               <?php
               $linhas = file("pedidos.txt", FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
               $prioridades = ["alta", "media", "baixa"];
@@ -135,7 +134,7 @@ if (isset($_GET['cod'])) {
 
                   if (strtolower(trim($p[5])) == $prioridade) {
                     ?> 
-                    <li> <?= htmlspecialchars($p[0]) ?>  - <?= htmlspecialchars($p[1])?> - <?= htmlspecialchars($p[2])?> - 
+                    <b><li class="fila" style="color:#8fa0c0;"> <?= htmlspecialchars($p[0]) ?>  - <?= htmlspecialchars($p[1])?> - <?= htmlspecialchars($p[2])?> 
                     <label 
                       <?php 
                       if (ucfirst($p[5]) == 'Alta'):?>
@@ -153,7 +152,7 @@ if (isset($_GET['cod'])) {
                       >
                       <b><?=ucfirst($p[5])?></b>
                     </label> 
-                    </li>
+                    </li></b>
                     <?php
                   }
                 }
@@ -161,7 +160,6 @@ if (isset($_GET['cod'])) {
               ?>
             </ul>
 
-          </ul>
         </section>
 
       </div>
